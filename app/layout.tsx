@@ -1,9 +1,14 @@
-import './globals.css'
+import { createClient } from "urql";
+import "./globals.css";
+
+const client = createClient({
+  url: "http://localhost:3000/graphql",
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -14,5 +19,5 @@ export default function RootLayout({
       <head />
       <body>{children}</body>
     </html>
-  )
+  );
 }
