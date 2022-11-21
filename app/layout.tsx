@@ -1,9 +1,4 @@
-import { createClient } from "urql";
 import "./globals.css";
-
-const client = createClient({
-  url: "http://localhost:3000/graphql",
-});
 
 export default function RootLayout({
   children,
