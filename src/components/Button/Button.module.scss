@@ -8,37 +8,38 @@
   padding: 12px 36px;
   outline: transparent solid 1px;
   transition: all 0.1s linear;
+  &:hover {
+    outline: #000 solid 1px;
+  }
   &.primary {
+    outline: none;
     background-color: #fff;
     border-color: #fff;
     color: #000;
     &:hover {
-      outline: none;
-      background-color: #444444;
-      border-color: #444444;
+      opacity: 0.75;
+    }
+    &.disabled {
+      opacity: 0.25;
     }
   }
   &.disabled {
-    opacity: 0.5;
+    opacity: 0.25;
+    outline: none;
     cursor: not-allowed;
-    &:hover {
-      color: inherit;
-      background-color: inherit;
-      border-color: inherit;
-    }
   }
 }
 
 @media (prefers-color-scheme: light) {
   .button {
     border-color: #000;
-    &:hover {
-      outline: #000000 solid 1px;
-    }
     &.primary {
       background-color: #000;
       border-color: #000;
       color: #fff;
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 }

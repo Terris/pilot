@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import styles from "./Button.module.scss";
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   title: string;
   primary?: boolean;
   disabled?: boolean;

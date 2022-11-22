@@ -1,7 +1,7 @@
 import { useState, ReactNode, HTMLAttributes } from "react";
 import { useRouter } from "next/router";
 import { RiEqualizerLine } from "react-icons/ri";
-import TextButton from "../TextButton";
+import TextButton from "../TextButton/TextButton";
 import styles from "./DropMenu.module.scss";
 
 interface DropMenuProps {

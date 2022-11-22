@@ -1,5 +1,5 @@
 import { currencyStringToNumberString } from "../../utils/currency";
-import TextInput, { TextInputProps } from "../TextInput";
+import TextInput, { TextInputProps } from "../TextInput/TextInput";
 
 interface CurrencyInputProps extends TextInputProps {
   value: string;
