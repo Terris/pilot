@@ -1,0 +1,28 @@
+/* Color
+------------------------------------ */
+
+$black: #353535;
+$grey: #f7f5f5;
+$grey10: #efeeec;
+$grey20: #dcdcdc;
+$grey70: #787878;
+$green50: #a1bf8d;
+$green60: #6f9556;
+$green100: #4a5741;
+$red20: #bf8d8d;
+$red50: #ba5757;
+$red100: #e44848;
+$white: #ffffff;
+
+/* Animation
+------------------------------------ */
+
+@keyframes slidedown {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 100vh;
+  }
+}

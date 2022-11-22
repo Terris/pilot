@@ -1,0 +1,22 @@
+.card {
+  background: #222222;
+  margin: 18px;
+  padding: 18px;
+  border-radius: 6px;
+  border: 1px solid #2a2a2a;
+}
+
+.card-link:hover {
+  background: #2a2a2a;
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    background: #f0f0f0;
+    border-color: #d9d9d9;
+  }
+
+  .card-link:hover {
+    background: #e4e4e4;
+  }
+}

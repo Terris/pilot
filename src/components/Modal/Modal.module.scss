@@ -1,0 +1,41 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+.modal-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  flex: 1;
+  height: 100%;
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  color: inherit;
+  transition: opacity 0.1s ease-in;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .modal {
+    background: #1a1a1a;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .modal {
+    background: white;
+  }
+}
