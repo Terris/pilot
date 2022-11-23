@@ -10,7 +10,8 @@
     "cypress": "cypress open",
     "gql": "graphql-codegen",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "start-storybook -p 6006"
+    "build-storybook": "start-storybook -p 6006",
+    "realm:pull": "realm-cli pull --local realm"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.16.1",

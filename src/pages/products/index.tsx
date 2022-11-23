@@ -26,13 +26,10 @@ export default function ProductsPage() {
     refetchOnWindowFocus: false,
   });
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <Layout pageTitle="Products">
       <h2>Products</h2>
+      {isLoading && <p>Loading ...</p>}
       {error instanceof Error && <p>An error occured. {error.message}</p>}
       <div>
         {data && (
