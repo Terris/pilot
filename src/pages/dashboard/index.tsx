@@ -6,7 +6,7 @@ function DashboardPage() {
   const { currentUser } = useAuth();
   console.log(currentUser);
   return (
-    <PrivateLayout>
+    <PrivateLayout pageTitle="Dashboard">
       <h2>Dashboard</h2>
     </PrivateLayout>
   );

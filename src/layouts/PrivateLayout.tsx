@@ -11,14 +11,16 @@ interface PrivateLayoutProps {
 
 export default function PrivateLayout({
   children,
-  pageTitle,
+  pageTitle = "",
 }: PrivateLayoutProps) {
   const _ = usePrivateRoute();
+
+  const title = ["Pilot", pageTitle ? ` - ${pageTitle}` : ""].join("");
 
   return (
     <>
       <Head>
-        <title>Pilot {pageTitle && `| ${pageTitle}`}</title>
+        <title>{title}</title>
         <meta name="description" content="Pilot" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

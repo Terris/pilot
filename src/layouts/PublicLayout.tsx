@@ -8,10 +8,11 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, pageTitle }: LayoutProps) {
+  const title = ["Pilot", pageTitle ? ` - ${pageTitle}` : ""].join("");
   return (
     <>
       <Head>
-        <title>Pilot {pageTitle && `| ${pageTitle}`}</title>
+        <title>{title}</title>
         <meta name="description" content="Pilot" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
