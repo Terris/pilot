@@ -3,6 +3,7 @@ import { getValidAccessToken } from "src/lib/realm";
 import { gqlClient } from "src/lib/graphql-request";
 import { graphql } from "src/gql/gql";
 import Layout from "src/layouts/Layout";
+import usePrivateRoute from "src/hooks/usePrivateRoute";
 
 const allProductsQueryDocument = graphql(/* GraphQL */ `
   query products {
@@ -20,6 +21,8 @@ const fetchProducts = async () => {
 };
 
 export default function ProductsPage() {
+  const _ = usePrivateRoute();
+
   const { isLoading, data, error } = useQuery({
     queryKey: ["products"],
     queryFn: fetchProducts,

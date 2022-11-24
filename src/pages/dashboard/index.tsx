@@ -4,10 +4,10 @@ import { useAuth } from "src/context/AuthContext";
 
 function DashboardPage() {
   const { currentUser } = useAuth();
-
+  console.log(currentUser);
   return (
     <Layout>
-      <h2>Welcome, {currentUser?.name}!</h2>
+      <h2>Dashboard</h2>
     </Layout>
   );
 }
