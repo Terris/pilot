@@ -1,14 +1,14 @@
 import { useRouter } from "next/router";
-import Layout from "src/layouts/Layout";
+import PrivateLayout from "src/layouts/PrivateLayout";
 import { useAuth } from "src/context/AuthContext";
 
 function DashboardPage() {
   const { currentUser } = useAuth();
   console.log(currentUser);
   return (
-    <Layout>
+    <PrivateLayout>
       <h2>Dashboard</h2>
-    </Layout>
+    </PrivateLayout>
   );
 }
 

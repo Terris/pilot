@@ -1,13 +1,13 @@
-import Layout from "../layouts/Layout";
+import PublicLayout from "../layouts/PublicLayout";
 
 function Home() {
   return (
     <>
-      <Layout pageTitle="Home">
+      <PublicLayout pageTitle="Home">
         <main>
           <h2>Welcome</h2>
         </main>
-      </Layout>
+      </PublicLayout>
     </>
   );
 }

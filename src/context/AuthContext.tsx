@@ -149,7 +149,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   };
 
   const signOut = async () => {
-    router.push("/");
     setCurrentUser(null);
     await realmApp?.currentUser?.logOut();
   };

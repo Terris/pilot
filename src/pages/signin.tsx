@@ -1,6 +1,6 @@
 import { useState, FormEvent, useMemo } from "react";
 import { object, string } from "yup";
-import Layout from "src/layouts/Layout";
+import PublicLayout from "src/layouts/PublicLayout";
 import { useAuth } from "src/context/AuthContext";
 import { TextInput, Button, Alert } from "src/components";
 import { joinErrors } from "src/utils";
@@ -46,7 +46,7 @@ function SignInPage() {
   );
 
   return (
-    <Layout pageTitle="Sign In">
+    <PublicLayout pageTitle="Sign In">
       <div style={{ maxWidth: "600px", margin: "0 auto" }}>
         <h2>Sign In</h2>
         {mergedErrors && <Alert alert={mergedErrors} />}
@@ -69,7 +69,7 @@ function SignInPage() {
           <Button title="Sign In" primary disabled={loading} />
         </form>
       </div>
-    </Layout>
+    </PublicLayout>
   );
 }
 

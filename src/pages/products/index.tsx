@@ -2,8 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getValidAccessToken } from "src/lib/realm";
 import { gqlClient } from "src/lib/graphql-request";
 import { graphql } from "src/gql/gql";
-import Layout from "src/layouts/Layout";
-import usePrivateRoute from "src/hooks/usePrivateRoute";
+import PrivateLayout from "src/layouts/PrivateLayout";
 
 const allProductsQueryDocument = graphql(/* GraphQL */ `
   query products {
@@ -21,8 +20,6 @@ const fetchProducts = async () => {
 };
 
 export default function ProductsPage() {
-  const _ = usePrivateRoute();
-
   const { isLoading, data, error } = useQuery({
     queryKey: ["products"],
     queryFn: fetchProducts,
@@ -30,7 +27,7 @@ export default function ProductsPage() {
   });
 
   return (
-    <Layout pageTitle="Products">
+    <PrivateLayout pageTitle="Products">
       <h2>Products</h2>
       {isLoading && <p>Loading ...</p>}
       {error instanceof Error && <p>An error occured. {error.message}</p>}
@@ -43,6 +40,6 @@ export default function ProductsPage() {
           </ul>
         )}
       </div>
-    </Layout>
+    </PrivateLayout>
   );
 }
