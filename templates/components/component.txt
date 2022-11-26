@@ -1,0 +1,7 @@
+interface {{pascalCase name}}Props {}
+
+function {{pascalCase name}}({}: {{pascalCase name}}Props) {
+  return <h2>{{titleCase name}} Component</h2>
+}
+
+export default {{pascalCase name}};

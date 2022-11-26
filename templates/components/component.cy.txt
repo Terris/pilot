@@ -1,0 +1,6 @@
+import {{pascalCase name}} from './{{pascalCase name}}'
+
+it('renders', () => {
+  cy.mount(<{{pascalCase name}}>)
+  cy.get('h2').should('contains.text', '{{titleCase name}}')
+})
